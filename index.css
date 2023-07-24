@@ -29,8 +29,35 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   margin: 0 auto;
   padding: 5rem;
+}
+
+input {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1px;
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: var(--blue);
+  border: none;
+  color: var(--text-color);
+  font-weight: 500;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
 }
 
 .card {

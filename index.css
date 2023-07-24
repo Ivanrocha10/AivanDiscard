@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -6,8 +8,30 @@
 
 :root {
   --bg: #202225
+  --text-color: #f1f1f1
 }
 
 body {
   background-color: var(--bg);
+  color: var(--text-color);
+  font-family: 'Poppins', sans-serif;
+}
+
+.conteiner {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 48, 0.125);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }

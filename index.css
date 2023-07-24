@@ -15,8 +15,8 @@
   --green: #57f287;
   --red: #ed4245;
   --blue: #5865f2;
-  --yellow: #eb459e;
-  --pink: #fee75c;
+  --yellow: #fee75c;
+  --pink: #eb459e;
 }
 
 body {
@@ -117,4 +117,12 @@ button {
   padding: 1rem 2rem;
   margin: 1rem 2rem;
   border-radius: 8px;
+}
+
+.info span:first-child {
+  color: var(--pink);
+}
+
+.info span:last-child {
+  color: var(--green);
 }

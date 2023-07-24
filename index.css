@@ -19,6 +19,7 @@ body {
 
 .conteiner {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   padding: 5rem;
@@ -27,8 +28,6 @@ body {
 .card {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  height: 500px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(17, 25, 48, 0.125);

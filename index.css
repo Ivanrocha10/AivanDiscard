@@ -9,8 +9,8 @@
 :root {
   --bg: #2c2e33;
   --border: rgba(255, 255, 255, 0.18);
-  --bg-card: #111214;
-  --bg-card-info: #232328;
+  --bg-card: #232328;
+  --bg-card-info: #111214;
   --text-color: #f1f1f1;
   --green: #57f287;
   --red: #ed4245;
@@ -51,7 +51,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  height: 100px;
+  height: 150px;
   border-radius: 12px 12px 0 0;
 }
 
@@ -70,10 +70,17 @@ body {
   padding: 0.1rem;
 }
 
-.badge img {
-  width: 2rem;
-  height: 2rem;
+.badge {
+  background-color: var(--bg-card-info);
+  padding: 1rem;
+  border-radius: 8px;
 }
+
+.badge img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 
 .info {
   display: flex;
@@ -81,4 +88,6 @@ body {
   color: var(--text-color);
   background-color: var(--bg-card-info);
   padding: 1rem 2rem;
+  margin: 1rem 2rem;
+  border-radius: 8px;
 }

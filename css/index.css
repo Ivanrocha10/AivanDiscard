@@ -38,10 +38,9 @@ input {
   background-color: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1rem;
+  padding: 1rem 3rem;
   color: var(--text-color);
   font-size: 1rem;
-  margin-bottom: 1rem;
 }
 
 button {
@@ -56,15 +55,7 @@ button {
 
 .search {
   display: flex;
-  max-width: 500px;
-}
-
-.search form {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -94,14 +85,16 @@ button {
   justify-content: space-between;
   align-items: center;
   padding: 0 2rem;
+  margin-top: 1rem;
 }
 
 .profile-picture img {
+  position: absolute;
+  top: 100px;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 2px solid var(--bg);
-  padding: 0.1rem;
+  border: 5px solid var(--bg-card);
 }
 
 .badge {
@@ -114,7 +107,6 @@ button {
   width: 1.5rem;
   height: 1.5rem;
 }
-
 
 .info {
   display: flex;
@@ -150,4 +142,8 @@ i {
   font-size: 1rem;
   margin-top: 2rem;
   cursor: pointer;
+}
+
+.spa {
+  color: white;
 }

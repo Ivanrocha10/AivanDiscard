@@ -119,10 +119,18 @@ button {
   border-radius: 8px;
 }
 
-.info span:first-child {
+i {
+  font-weight: 700;
+}
+
+.idUser {
   color: var(--pink);
 }
 
-.info span:last-child {
+.tagUser {
   color: var(--green);
+}
+
+.dateUser {
+  color: var(--yellow);
 }

@@ -5,6 +5,66 @@ const user = document.getElementById('user')
 const createdAccount = document.getElementById('account')
 const searchFrom = document.forms['user-code']
 const searchInput = searchFrom.querySelector('input')
+const badge = document.querySelector('.badge img')
+
+const badgeUrls = {
+  DISCORD_EMPLOYEE: 
+    './assets/badges/discord_employee.svg',
+  PARTNERED_SERVER_OWNER: 
+    './assets/badges/partnered_server_owner.svg',
+  HYPESQUAD_EVENTS: 
+    './assets/badges/hypesquad_events.svg',
+  BUGHUNTER_LEVEL_1: 
+    './assets/badges/bughunterlevel1.svg',
+  HOUSE_BRAVERY: 
+    './assets/badges/hypesquadbravery.svg',
+  HOUSE_BRILLIANCE: 
+    './assets/badges/hypesquadbrilliance.svg',
+  HOUSE_BALANCE: 
+    './assets/badges/hypesquadbalance.svg',
+  EARLY_SUPPORTER: 
+    './assets/badges/earlysupporter.svg',
+  TEAM_USER: 
+    './assets/badges/team_user.svg',
+  BUGHUNTER_LEVEL_2: 
+    './assets/badges/bughunter_level_2.svg',
+  VERIFIED_BOT: 
+    './assets/badges/verified_bot.svg',
+  EARLY_VERIFIED_BOT_DEVELOPER:
+    './assets/badges/early_verified_bot_developer.svg',
+  DISCORD_CERTIFIED_MODERATOR:
+    './assets/badges/discord_certified_moderator.svg',
+  BOT_HTTP_INTERACTIONS: 
+    './assets/badges/bot_http_interactions.svg',
+  SPAMMER: 
+    './assets/badges/spammer.svg',
+  ACTIVE_DEVELOPER: 
+    './assets/badges/activedeveloper.svg',
+  QUARANTINED: 
+    './assets/badges/quarantined.svg',
+  GATEWAY_PRESENCE: 
+    './assets/badges/gateway_presence.svg',
+  GATEWAY_PRESENCE_LIMITED: 
+    './assets/badges/gateway_presence_limited.svg',
+  GATEWAY_GUILD_MEMBERS: 
+   './assets/badges/gateway_guild_members.svg',
+  GATEWAY_GUILD_MEMBERS_LIMITED:
+    './assets/badges/gateway_guild_members_limited.svg',
+  VERIFICATION_PENDING_GUILD_LIMIT:
+    './assets/badges/verification_pending_guild_limit.svg',
+  EMBEDDED: 
+    './assets/badges/embedded.svg',
+  GATEWAY_MESSAGE_CONTENT: 
+    './assets/badges/gateway_message_content.svg',
+  GATEWAY_MESSAGE_CONTENT_LIMITED:
+    './assets/badges/gateway_message_content_limited.svg',
+  APPLICATION_COMMAND_BADGE: 
+    './assets/badges/application_command_badge.svg'
+}
+
+function getBadgeSrc(flag) {
+  return badgeUrls[flag] || null
+}
 
 searchFrom.addEventListener('submit', e => {
   e.preventDefault()
@@ -36,6 +96,7 @@ searchFrom.addEventListener('submit', e => {
       id.innerText = data.id
       user.innerText = data.tag
       createdAccount.innerText = formattedDate
+      badge.src = data.badge
     })
     .catch(error => {
       console.log(error)

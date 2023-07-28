@@ -1,15 +1,18 @@
-const avatar = document.querySelector('avatar')
+const avatar = document.getElementById('avatar')
 const id = document.getElementById('id')
 const user = document.getElementById('user')
-const createdAccount = document.getElementBy('account')
+const createdAccount = document.getElementById('account')
 const searchFrom = document.forms['user-code']
 const searchInput = searchFrom.querySelector('input')
 
-searchFrom.addEventListener('submit', e => {
+searchFrom.addEventListener('submit', (e) => {
   e.preventDefault()
   const searchValue = searchInput.value
-
-  fetch(`https://discordlookup.mesavirep.xyz/v1/user/${searchId}`)
+  if (searchValue === '') {
+    alert('Por favor, digite um Id do Discord!')
+    return
+  }
+  fetch(`https://discordlookup.mesavirep.xyz/v1/user/${searchValue}`)
     .then(response => response.json())
     .then(data => {
       avatar.src = data.avatar

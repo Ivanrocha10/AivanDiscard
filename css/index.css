@@ -127,13 +127,13 @@ a {
 .badge {
   display: flex;
   background-color: var(--bg-card-info);
-  padding: 0.8rem;
+  padding: 0.5rem;
   border-radius: 8px;
 }
 
 .badge img {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .info {

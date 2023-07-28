@@ -146,8 +146,6 @@ a {
   border-radius: 8px;
 }
 
-
-
 i {
   font-weight: 700;
 }
@@ -190,8 +188,14 @@ footer {
   .card {
     height: 100%;
   }
-  
+
   footer {
     margin-top: 0.5rem;
-  }  
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

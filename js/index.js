@@ -15,20 +15,24 @@ searchFrom.addEventListener('submit', (e) => {
     return
   } 
   fetch(`https://discordlookup.mesavirep.xyz/v1/user/${searchValue}`)
+
     .then((response) => response.json())
     .then((data) => {
-      
+      const formattedDate = new Date(data.created_at).toLocaleDateString('pt-BR', {
+        day: 'numeric',
+        month: 'numeric',
+        year: 'numeric',
+      })
       if (data.banner.link) {
-        banner.style.background = `url(${data.banner.link})`
+        banner.style.backgroundImage = `url(${data.banner.link})`
       } else {
-        banner.style.background = data.banner.color
+        banner.style.backgroundColor = data.banner.color
       }
- 
 
       avatar.src = data.avatar.link
       id.innerText = data.id
       user.innerText = data.tag
-      createdAccount.innerText = data.created_at
+      createdAccount.innerText = formattedDate
     })
     .catch((error) => {
       console.log(error)

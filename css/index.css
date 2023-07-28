@@ -155,6 +155,9 @@ i {
 }
 
 .tagUser {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   color: var(--green);
 }
 
@@ -192,10 +195,4 @@ footer {
   footer {
     margin-top: 0.5rem;
   }
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
 }

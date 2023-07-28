@@ -98,7 +98,7 @@ a {
 }
 
 .banner {
-  background-image: url(https://images.pexels.com/photos/12358219/pexels-photo-12358219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+  background-image: url(https://images.pexels.com/photos/3295142/pexels-photo-3295142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -145,6 +145,8 @@ a {
   margin: 1rem 2rem;
   border-radius: 8px;
 }
+
+
 
 i {
   font-weight: 700;

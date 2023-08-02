@@ -5,7 +5,8 @@ const banner = document.getElementById('banner')
 const createdAccount = document.getElementById('account')
 const searchForm = document.forms['user-code']
 const searchInput = searchForm.querySelector('input')
-const badge = document.querySelector('.badge img')
+const badge = document.querySelector('.badge-default')
+const button = document.getElementById('image-button')
 
 const badgeUrls = {
   DISCORD_EMPLOYEE: './assets/badges/discord_employee.svg',
@@ -50,7 +51,7 @@ searchForm.addEventListener('submit', e => {
   const searchValue = searchInput.value
 
   if (searchValue === '') {
-    alert('Por favor, informe um ID do Discord!')
+    alert('Por favor, preencha o campo com um ID do Discord!')
     return
   }
   fetch(`https://discordlookup.mesavirep.xyz/v1/user/${searchValue}`)
@@ -76,7 +77,13 @@ searchForm.addEventListener('submit', e => {
       id.innerText = data.id
       user.innerText = data.tag
       createdAccount.innerText = formattedDate
-      badge.src = getBadgeSrc(data.badges[0])
+      badge.innerHTML = data.badges.reduce((acc, flag) => {
+        const badgeSrc = getBadgeSrc(flag)
+        return `${acc} 
+      <div class="badge">
+        <img src="${badgeSrc}" alt="${flag}">
+      </div>`
+      }, '')
     })
     .catch(error => {
       console.log(error)

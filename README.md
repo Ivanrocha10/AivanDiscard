@@ -1,6 +1,6 @@
 # AivanDiscard
 
-O projeto AivanDiscard....
+O projeto AivanDiscard foi concebido através do canal do YouTube conhecido como Birobirobiro, no qual o próprio 'Biro' atua como instrutor. Com o auxílio de um vídeo publicado por ele, consegui desenvolver este projeto que apresenta um card do Discord. Utilizamos uma API que permite obter informações como o nome de usuário, o ID, a data de criação da conta na plataforma e até mesmo a foto e o banner do usuário. Todo o desenvolvimento foi realizado utilizando as tecnologias HTML, CSS e JavaScript. Além disso, para adicionar o efeito de movimento ao card, incorporamos a biblioteca Vanilla Tilt.js ao projeto.
 
 ## Demonstração
 

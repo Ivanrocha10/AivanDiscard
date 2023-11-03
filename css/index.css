@@ -124,7 +124,6 @@ a {
   border: 5px solid var(--bg-card);
 }
 
-
 .info {
   display: flex;
   flex-direction: column;
@@ -189,10 +188,8 @@ footer {
   footer {
     margin-top: 0.5rem;
   }
-}
 
-@media screen and (min-width: 425px) {
   .idUser {
     font-size: 15px;
-}
+  }
 }
